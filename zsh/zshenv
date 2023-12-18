@@ -1,0 +1,6 @@
+# .zshenv - sets environment variables for Zsh
+
+[ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && \
+    source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+(command -v nvim >/dev/null) && export EDITOR="$(command -v nvim)"
