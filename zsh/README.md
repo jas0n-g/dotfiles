@@ -21,13 +21,15 @@ setup_zsh() {
 
 ## [zshenv](zshenv)
 
-Link this file to `~/.zshenv`.
+Link/copy this file to `~/.zshenv`.
 
 ```sh file:zshenv
 # .zshenv - sets environment variables for Zsh
 
 [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && \
     source $HOME/.nix-profile/etc/profile.d/nix.sh
+
+[ -d $HOME/.local/bin ] && export PATH=$PATH:$HOME/.local/bin
 
 (command -v nvim >/dev/null) && export EDITOR="$(command -v nvim)"
 ```
@@ -36,13 +38,13 @@ Link this file to `~/.zshenv`.
 
 ## [zshrc](zshrc)
 
-Link this file to `~/.zshrc`.
+Link/copy this file to `~/.zshrc`.
 
 ```sh file:zshrc
 # .zshrc - sets configurations for interactive Zsh
 
 autoload -U colors && colors
-PROMPT="%(?.%F{green}%?.%F{red}%?) %F{blue}%(4~|%-1~/.../%2~|%3~) $reset_color%(!.#.)) "
+PROMPT="%(?.%F{green}%?.%F{red}%?) %F{cyan}%(4~|%-1~/.../%2~|%3~) $reset_color%(!.#.)) "
 
 HISTSIZE=5000
 SAVEHIST=5000

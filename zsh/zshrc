@@ -1,7 +1,7 @@
 # .zshrc - sets configurations for interactive Zsh
 
 autoload -U colors && colors
-PROMPT="%(?.%F{green}%?.%F{red}%?) %F{blue}%(4~|%-1~/.../%2~|%3~) $reset_color%(!.#.)) "
+PROMPT="%(?.%F{green}%?.%F{red}%?) %F{cyan}%(4~|%-1~/.../%2~|%3~) $reset_color%(!.#.)) "
 
 HISTSIZE=5000
 SAVEHIST=5000

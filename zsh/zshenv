@@ -3,4 +3,6 @@
 [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && \
     source $HOME/.nix-profile/etc/profile.d/nix.sh
 
+[ -d $HOME/.local/bin ] && export PATH=$PATH:$HOME/.local/bin
+
 (command -v nvim >/dev/null) && export EDITOR="$(command -v nvim)"
