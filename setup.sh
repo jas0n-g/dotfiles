@@ -28,10 +28,16 @@ setup_tmux() {
     mkdir -p $HOME/.config/tmux
     ln -sf $(realpath $dot_dir/tmux/tmux.conf) $HOME/.config/tmux/tmux.conf
 }
+setup_neovim() {
+    rm -rf $HOME/.config/nvim
+    mkdir -p $HOME/.config/nvim
+    ln -sf $(realpath $dot_dir/neovim/init.lua) $HOME/.config/nvim/init.lua
+}
 
 for input in $@; do
     case "$input" in
         "zsh") setup_zsh ;;
         "tmux") setup_tmux ;;
+        "nvim"|"neovim") setup_neovim ;;
     esac
 done

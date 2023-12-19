@@ -28,11 +28,13 @@ fi
 
 <<<zsh/README.md:setup-zsh>>>
 <<<tmux/README.md:setup-tmux>>>
+<<<neovim/README.md:setup-neovim>>>
 
 for input in $@; do
     case "$input" in
         "zsh") setup_zsh ;;
         "tmux") setup_tmux ;;
+        "nvim"|"neovim") setup_neovim ;;
     esac
 done
 ```

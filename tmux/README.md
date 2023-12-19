@@ -24,7 +24,9 @@ setup_tmux() {
 Link/copy this file to `$HOME/.config/tmux/tmux.conf`.
 
 ```tmux file:tmux.conf
-set -g default-terminal "tmux-256color"
+# tmux.conf - tmux configuration
+
+set -g default-terminal "xterm-256color"
 set -g mouse on
 set -g escape-time 0
 set -g mode-keys vi
