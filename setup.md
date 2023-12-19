@@ -27,10 +27,12 @@ if (command -v find >/dev/null); then
 fi
 
 <<<zsh/README.md:setup-zsh>>>
+<<<tmux/README.md:setup-tmux>>>
 
 for input in $@; do
     case "$input" in
         "zsh") setup_zsh ;;
+        "tmux") setup_tmux ;;
     esac
 done
 ```

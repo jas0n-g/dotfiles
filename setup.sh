@@ -23,9 +23,15 @@ setup_zsh() {
     ln -sf $(realpath $dot_dir/zsh/zshenv) $HOME/.zshenv
     ln -sf $(realpath $dot_dir/zsh/zshrc) $HOME/.zshrc
 }
+setup_tmux() {
+    rm -rf $HOME/.tmux.conf $HOME/.config/tmux
+    mkdir -p $HOME/.config/tmux
+    ln -sf $(realpath $dot_dir/tmux/tmux.conf) $HOME/.config/tmux/tmux.conf
+}
 
 for input in $@; do
     case "$input" in
         "zsh") setup_zsh ;;
+        "tmux") setup_tmux ;;
     esac
 done
