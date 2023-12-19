@@ -61,6 +61,13 @@ require("lazy").setup({
     "RaafatTurki/hex.nvim",
     "stevearc/oil.nvim",
     "AckslD/nvim-FeMaco.lua",
+
+    {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      ft = { "markdown" },
+      build = function() vim.fn["mkdp#util#install"]() end,
+    }
 })
 
 require("nvim-treesitter.configs").setup({
