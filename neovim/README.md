@@ -75,6 +75,7 @@ vim.o.colorcolumn = "80"
 vim.o.scrolloff = 8
 vim.o.cursorline = true
 vim.o.termguicolors = false
+vim.o.exrc = true
 ```
 
 ### `<<<general-keybinds>>>`
@@ -83,13 +84,16 @@ Keybinds that don't require plugins to work.
 
 ```lua macro:general-keybinds
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "J", "mzJ`z")
+
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.keymap.set("n", "<leader><leader>fp", ":w<CR>:!prettier . --write")
 ```
 
 ### `<<<lazy-setup>>>`
@@ -114,7 +118,7 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-    
+
     "echasnovski/mini.nvim",
 
     "HiPhish/rainbow-delimiters.nvim",
@@ -134,6 +138,7 @@ require("lazy").setup({
 ### `<<<treesitter-configs>>>`
 
 Sets up:
+
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [playground](https://github.com/nvim-treesitter/playground)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
@@ -150,6 +155,7 @@ require("treesitter-context").setup()
 ### `<<<lsp-configs>>>`:
 
 Sets up:
+
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -229,6 +235,7 @@ vim.keymap.set("n", "<leader>g", ":Pick grep_live<CR>")
 ### `<<<misc-plugins-configs>>>`
 
 Sets up:
+
 - [rainbow-delimiters.nvim](https://gitlab.com/HiPhish/rainbow-delimiters.nvim)
 
 ```lua macro:misc-plugins-configs
