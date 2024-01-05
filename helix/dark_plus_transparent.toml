@@ -1,0 +1,6 @@
+inherits = "dark_plus"
+
+"ui.background" = ""
+"ui.bufferline.background" = { bg = "" }
+"ui.bufferline" = { bg = "dark_gray3", fg = "text" }
+"ui.bufferline.active" = { bg = "background", fg = "text" }

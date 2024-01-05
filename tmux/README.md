@@ -2,8 +2,8 @@
 
 # tmux Config
 
-My configs for [tmux](https://github.com/tmux/tmux), which is my terminal
-multiplexer of choice.
+My configs for [tmux](https://github.com/tmux/tmux), which is my backup
+terminal multiplexer of choice.
 
 ---
 

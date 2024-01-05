@@ -30,6 +30,7 @@ fi
 <<<tmux/README.md:setup-tmux>>>
 <<<neovim/README.md:setup-neovim>>>
 <<<helix/README.md:setup-helix>>>
+<<<wezterm/README.md:setup-wezterm>>>
 
 for input in $@; do
     case "$input" in
@@ -37,7 +38,7 @@ for input in $@; do
         "tmux") setup_tmux ;;
         "nvim"|"neovim") setup_neovim ;;
         "hx"|"helix") setup_helix ;;
-        "hx"|"helix") setup_helix ;;
+        "wezterm") setup_wezterm ;;
     esac
 done
 ```

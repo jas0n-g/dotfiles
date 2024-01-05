@@ -8,3 +8,4 @@ Tangled using [nail](https://github.com/jas0n-g/nail-py).
 - [Tmux Configs](tmux/README.md)
 - [Neovim Configs](neovim/README.md)
 - [Helix Configs](helix/README.md)
+- [Wezterm Configs](wezterm/README.md)

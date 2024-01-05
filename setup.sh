@@ -35,9 +35,15 @@ setup_neovim() {
 }
 setup_helix() {
     rm -rf $HOME/.config/helix
-    mkdir -p $HOME/.config/helix
+    mkdir -p $HOME/.config/helix/themes
     ln -sf $(realpath $dot_dir/helix/config.toml) $HOME/.config/helix/config.toml
     ln -sf $(realpath $dot_dir/helix/languages.toml) $HOME/.config/helix/languages.toml
+    ln -sf $(realpath $dot_dir/helix/dark_plus_transparent.toml) $HOME/.config/helix/themes/dark_plus_transparent.toml
+}
+setup_wezterm() {
+    rm -rf $HOME/.config/wezterm
+    mkdir -p $HOME/.config/wezterm
+    ln -sf $(realpath $dot_dir/wezterm/wezterm.lua) $HOME/.config/wezterm/wezterm.lua
 }
 
 for input in $@; do
@@ -46,6 +52,6 @@ for input in $@; do
         "tmux") setup_tmux ;;
         "nvim"|"neovim") setup_neovim ;;
         "hx"|"helix") setup_helix ;;
-        "hx"|"helix") setup_helix ;;
+        "wezterm") setup_wezterm ;;
     esac
 done

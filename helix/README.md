@@ -12,9 +12,10 @@ editor of choice.
 ```sh macro:setup-helix
 setup_helix() {
     rm -rf $HOME/.config/helix
-    mkdir -p $HOME/.config/helix
+    mkdir -p $HOME/.config/helix/themes
     ln -sf $(realpath $dot_dir/helix/config.toml) $HOME/.config/helix/config.toml
     ln -sf $(realpath $dot_dir/helix/languages.toml) $HOME/.config/helix/languages.toml
+    ln -sf $(realpath $dot_dir/helix/dark_plus_transparent.toml) $HOME/.config/helix/themes/dark_plus_transparent.toml
 }
 ```
 
@@ -23,12 +24,14 @@ setup_helix() {
 ## [config.toml](config.toml)
 
 ```toml file:config.toml
-theme = "base16_transparent"
+theme = "dark_plus_transparent"
 
 [editor]
 line-number = "relative"
 bufferline = "multiple"
 cursor-shape.insert = "bar"
+rulers = [80, 100]
+cursorline = true
 
 <<<keybinds>>>
 ```
@@ -92,4 +95,17 @@ C-c = "normal_mode"
 name = "markdown"
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
 auto-format = true
+```
+
+---
+
+## [dark_plus_transparent.toml](dark_plus_transparent.toml)
+
+```toml file:dark_plus_transparent.toml
+inherits = "dark_plus"
+
+"ui.background" = ""
+"ui.bufferline.background" = { bg = "" }
+"ui.bufferline" = { bg = "dark_gray3", fg = "text" }
+"ui.bufferline.active" = { bg = "background", fg = "text" }
 ```
