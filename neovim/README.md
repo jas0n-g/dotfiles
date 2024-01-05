@@ -2,8 +2,8 @@
 
 # Neovim Config
 
-The configurations for [Neovim](https://neovim.io), which is my text editor of
-choice.
+The configurations for [Neovim](https://neovim.io), which is my backup text
+editor of choice.
 
 ---
 

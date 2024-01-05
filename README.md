@@ -7,3 +7,4 @@ Tangled using [nail](https://github.com/jas0n-g/nail-py).
 - [Zsh Configs](zsh/README.md)
 - [Tmux Configs](tmux/README.md)
 - [Neovim Configs](neovim/README.md)
+- [Helix Configs](helix/README.md)

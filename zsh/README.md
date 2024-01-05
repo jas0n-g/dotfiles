@@ -29,9 +29,12 @@ Link/copy this file to `~/.zshenv`.
 [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ] && \
     source $HOME/.nix-profile/etc/profile.d/nix.sh
 
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
+
 [ -d $HOME/.local/bin ] && export PATH=$PATH:$HOME/.local/bin
 
 (command -v nvim >/dev/null) && export EDITOR="$(command -v nvim)"
+(command -v hx >/dev/null) && export EDITOR="$(command -v hx)"
 ```
 
 ---

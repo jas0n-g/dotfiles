@@ -29,12 +29,15 @@ fi
 <<<zsh/README.md:setup-zsh>>>
 <<<tmux/README.md:setup-tmux>>>
 <<<neovim/README.md:setup-neovim>>>
+<<<helix/README.md:setup-helix>>>
 
 for input in $@; do
     case "$input" in
         "zsh") setup_zsh ;;
         "tmux") setup_tmux ;;
         "nvim"|"neovim") setup_neovim ;;
+        "hx"|"helix") setup_helix ;;
+        "hx"|"helix") setup_helix ;;
     esac
 done
 ```

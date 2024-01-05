@@ -33,11 +33,19 @@ setup_neovim() {
     mkdir -p $HOME/.config/nvim
     ln -sf $(realpath $dot_dir/neovim/init.lua) $HOME/.config/nvim/init.lua
 }
+setup_helix() {
+    rm -rf $HOME/.config/helix
+    mkdir -p $HOME/.config/helix
+    ln -sf $(realpath $dot_dir/helix/config.toml) $HOME/.config/helix/config.toml
+    ln -sf $(realpath $dot_dir/helix/languages.toml) $HOME/.config/helix/languages.toml
+}
 
 for input in $@; do
     case "$input" in
         "zsh") setup_zsh ;;
         "tmux") setup_tmux ;;
         "nvim"|"neovim") setup_neovim ;;
+        "hx"|"helix") setup_helix ;;
+        "hx"|"helix") setup_helix ;;
     esac
 done
