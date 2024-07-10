@@ -1,0 +1,13 @@
+alias e find-file $1
+alias eo find-file-other-window $1
+alias ff find-file $1
+alias ffo find-file-other-window $1
+
+alias l ls -AF $*
+alias la ls -AF $*
+alias ls ls -AF $*
+alias ll ls -lAF $*
+
+alias cdls cd $1 && ls -AF
+alias cdla cd $1 && ls -AF
+alias cdll cd $1 && ls -lAF

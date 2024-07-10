@@ -1,0 +1,5 @@
+*
+!.gitignore
+!emacs.md
+!init.el
+!aliases
