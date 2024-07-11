@@ -34,7 +34,7 @@ function fish_prompt
     set stat (set_color red) ' ' $last_status ' ) ' (set_color normal)
   end
 
-  string join '' -- (set_color blue) (prompt_pwd --full-length-dirs 2) $stat
+  string join '' -- (set_color blue) (prompt_pwd --full-length-dirs=2) $stat
 end
 if type -q zoxide
   zoxide init fish | source
@@ -43,4 +43,9 @@ end
 if type -q direnv
   direnv hook fish | source
   set -g direnv_fish_mode disable_arrow
+end
+
+if type -q fzf
+  fzf --fish | source
+  set -Ux FZF_DEFAULT_OPTS '--color=fg:#ffffff,bg:#000000,hl:#4169e1 --color=fg+:#ffffff,bg+:#000000,hl+:#6495ed --color=info:#f0e68c,prompt:#b22222,pointer:#9932cc --color=marker:#2e8b57,spinner:#9932cc,header:#20B2AA'
 end
