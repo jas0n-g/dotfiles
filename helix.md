@@ -30,6 +30,8 @@ C-b = "move_char_left"
 
 [rockesheller-dark.toml](rockesheller-dark.toml):
 ```toml
+# link to ~/.config/helix/themes/rockesheller-dark.toml
+
 "attribute" = { fg = "#F0E68C" }
 "comment" = { fg = "#808080 ", modifiers = ["italic"] }
 "constant" = { fg = "#DAA520" }
@@ -92,7 +94,7 @@ C-b = "move_char_left"
 "ui.virtual.inlay-hint" = { fg = "#A9A9A9" }
 "ui.cursor" = { fg = "#FFFFFF", modifiers = ["reversed"] }
 "ui.cursor.primary" = { fg = "#FFFFFF", modifiers = ["reversed"] }
-"ui.cursor.match" = { fg = "#6495ED", modifiers = ["underlined"]}
+"ui.cursor.match" = { fg = "#F0E68C", modifiers = ["underlined"]}
 "ui.selection" = { fg = "#000000", bg = "#6495ED" }
 "ui.selection.primary" = { fg = "#000000", bg = "#6495ED" }
 "ui.cursorline.primary" = { bg = "#A9A9A9 " }
