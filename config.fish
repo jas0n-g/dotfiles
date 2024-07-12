@@ -9,7 +9,14 @@ if test -f ~/.nix-profile/etc/profile.d/nix.fish
   source ~/.nix-profile/etc/profile.d/nix.fish
 end
 
-if type -q hx
+if test -d ~/.local/bin
+  fish_add_path -m ~/.local/bin
+end
+
+if type -q nvim
+  set -Ux EDITOR nvim
+  alias nv="nvim"
+else if type -q hx
   set -Ux EDITOR hx
 else if type -q helix
   set -Ux EDITOR helix
@@ -20,6 +27,8 @@ if type -q moar
 else if type -q less
   set -Ux PAGER less
 end
+alias e="$EDITOR"
+
 alias ls='ls -AF --color=auto'
 alias la='ls -AF --color=auto'
 alias ll='ls -lAF --color=auto'
@@ -27,6 +36,14 @@ alias md='mkdir -pv'
 alias cp='cp -ri'
 alias rm='rm -ri'
 alias rmff='rm -rf'
+
+alias g='git'
+alias gs='git status -sb'
+alias gss='git status'
+alias gc='git commit'
+alias gacm='git add -A; git commit -m'
+alias gcm='git commit -m'
+alias gp='git push'
 function fish_prompt
   set -l last_status $status
   set -l stat (set_color green) ' ) ' (set_color normal)
