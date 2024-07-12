@@ -3,7 +3,7 @@
 These are my dotfiles, written literatly.
 
 - [Alacritty](alacritty.md)
-- [Helix](helix.md)
+- [Neovim](neovim.md)
 - [Fish](fish.md)
   - [Zoxide](fish.md#Plugins)
   - [Direnv](fish.md#Plugins)
